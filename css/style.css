@@ -856,7 +856,7 @@ section{
 }
 
 .logo img {
-   width: 125px;  /* Set the width to 50 pixels */
+   width: 12px;  /* Set the width to 50 pixels */
    height: 7px; /* Set the height to 50 pixels */
    margin-left: -200px; /* Adjust spacing between text and image */
    display: inline-block; /* Ensure there's no inline spacing */
