@@ -40,13 +40,13 @@
 }
 
 @mixin graphText($graphSize) {
-   font-size: $graphSize;
-   color:var(--light-color);
+   font-size: 2.1rem;
+   color:var(--black);
    line-height: 2;
 }
 
 @mixin graphText01($graphSize1){
-   font-size: $graphSize1;
+   font-size: 2.1rem;
    color: var(--white);
    line-height: 2;
 }
@@ -347,7 +347,7 @@ section{
       padding: 0;
    
        .slide{
-           min-height: 60rem;
+           min-height: 15rem;
            display: flex;
            align-items: center;
            position: relative;
@@ -381,6 +381,10 @@ section{
                }
            }
    
+       }
+       .swiper-container{
+         height: 300px;
+         width: 100%;
        }
    
        .swiper-button-next,
@@ -655,36 +659,43 @@ section{
 
 .domestic-container{
    .image {
-      height: 40rem;
+      height: 44.5rem;
       overflow: hidden;
 
       img {
-         height: 100%;
+         height: 25%;
          width: 100%;
          object-fit: cover;
          transition: .2s linear;
       }
+      p {
+         @include graphText(1.5rem);
+         padding: 1rem 0;
+         
+     }
    } 
    .Our_Services{
       .heading {
          color: var(--Black);
       }
-      p {
-         @include graphText(1.5rem);
-         padding: 1rem 0;
-     }
+      
    }
    .domestic-services ul {
+      padding-bottom: 10rem;
       list-style-type: disc;
       padding-left: 2rem;
+     
    }
    .domestic-services li {
+
       margin-bottom: 1rem;
-      font-size: 1.6rem;
-      color: var(--dark-grey);
+      font-size: 2.1rem;
+      color: var(--black);
    }
+   
   
    .Choose_Us {
+      
       .heading {
          color: var(--Black);
       }
@@ -711,24 +722,28 @@ section{
 }
 .commercial-container{
    .image {
-      height: 40rem;
+      height: 40.5rem;
       overflow: hidden;
 
       img {
-         height: 100%;
+         height: 25%;
          width: 100%;
          object-fit: cover;
          transition: .2s linear;
       }
+      p {
+         @include graphText(1.5rem);
+         padding: 1rem 0;
+         span{
+            color: var(--green);
+         }
+     }
    } 
    .Our_Services{
       .heading {
          color: var(--Black);
       }
-      p {
-         @include graphText(1.5rem);
-         padding: 1rem 0;
-     }
+      
    }
    .commercial-services ul {
       list-style-type: disc;
@@ -736,8 +751,8 @@ section{
    }
    .commercial-services li {
       margin-bottom: 1rem;
-      font-size: 1.6rem;
-      color: var(--dark-grey);
+      font-size: 2.1rem;
+      color: var(--black);
    }
   
    .Choose_Us {
@@ -979,6 +994,9 @@ section{
 
 
 // media queries 
+.body{
+   overflow-x: hidden;
+}
 
 @media (max-width:1200px){
 
@@ -1062,7 +1080,5 @@ section{
    .about .row .content h3{
       font-size: 2.5rem;
    }
-
-   
 
 }
