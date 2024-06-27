@@ -652,14 +652,15 @@ section{
                   transition: .2s linear;
                }
             }  
-         }         
+         }   
+               
       }
    }
 }
 
 .domestic-container{
    .image {
-      height: 44.5rem;
+      height: 25.5rem;
       overflow: hidden;
 
       img {
@@ -671,6 +672,9 @@ section{
       p {
          @include graphText(1.5rem);
          padding: 1rem 0;
+         span{
+            color: var(--green);
+         }
          
      }
    } 
@@ -684,13 +688,23 @@ section{
       padding-bottom: 10rem;
       list-style-type: disc;
       padding-left: 2rem;
-     
+      p {
+         @include graphText(1.5rem);
+         padding: 1rem 0;
+         span{
+            color: var(--green);
+         }
+         
+     }
    }
    .domestic-services li {
 
       margin-bottom: 1rem;
       font-size: 2.1rem;
       color: var(--black);
+      span{
+         color: var(--green);
+      }
    }
    
   
@@ -722,7 +736,7 @@ section{
 }
 .commercial-container{
    .image {
-      height: 40.5rem;
+      height: 25.5rem;
       overflow: hidden;
 
       img {
@@ -748,6 +762,14 @@ section{
    .commercial-services ul {
       list-style-type: disc;
       padding-left: 2rem;
+      p {
+         @include graphText(1.5rem);
+         padding: 1rem 0;
+         span{
+            color: var(--green);
+         }
+         
+     }
    }
    .commercial-services li {
       margin-bottom: 1rem;
