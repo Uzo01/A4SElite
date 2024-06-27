@@ -600,7 +600,7 @@ section {
 }
 
 .domestic-container .image {
-  height: 44.5rem;
+  height: 25.5rem;
   overflow: hidden;
 }
 .domestic-container .image img {
@@ -616,6 +616,9 @@ section {
   line-height: 2;
   padding: 1rem 0;
 }
+.domestic-container .image p span {
+  color: var(--green);
+}
 .domestic-container .Our_Services .heading {
   color: var(--Black);
 }
@@ -624,10 +627,22 @@ section {
   list-style-type: disc;
   padding-left: 2rem;
 }
+.domestic-container .domestic-services ul p {
+  font-size: 2.1rem;
+  color: var(--black);
+  line-height: 2;
+  padding: 1rem 0;
+}
+.domestic-container .domestic-services ul p span {
+  color: var(--green);
+}
 .domestic-container .domestic-services li {
   margin-bottom: 1rem;
   font-size: 2.1rem;
   color: var(--black);
+}
+.domestic-container .domestic-services li span {
+  color: var(--green);
 }
 .domestic-container .Choose_Us .heading {
   color: var(--Black);
@@ -654,7 +669,7 @@ section {
 }
 
 .commercial-container .image {
-  height: 40.5rem;
+  height: 25.5rem;
   overflow: hidden;
 }
 .commercial-container .image img {
@@ -679,6 +694,15 @@ section {
 .commercial-container .commercial-services ul {
   list-style-type: disc;
   padding-left: 2rem;
+}
+.commercial-container .commercial-services ul p {
+  font-size: 2.1rem;
+  color: var(--black);
+  line-height: 2;
+  padding: 1rem 0;
+}
+.commercial-container .commercial-services ul p span {
+  color: var(--green);
 }
 .commercial-container .commercial-services li {
   margin-bottom: 1rem;
