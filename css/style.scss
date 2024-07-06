@@ -3,7 +3,7 @@
 
 :root{
    --green:#778831;
-   --gold:#f6d67f;
+   --gold:#D4AF37;
    --black:#111;
    --dark-grey:#7c7c7c;
    --white:#fff;
@@ -11,6 +11,7 @@
    --light-bg:#eee;
    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
    --border:.1rem solid rgba(0,0,0,.3);
+
 }
 
 *{
@@ -20,6 +21,23 @@
    outline: none; border: none;
    text-decoration: none;
 }
+$gold-light: #f5e79e;
+$gold-dark: #d4af37;
+$gold-highlight: #fff8b0;
+$gold-shadow: #aa7d1f;
+@mixin glossy-gold {
+   background: linear-gradient(
+     135deg,
+     $gold-light,
+     $gold-dark 40%,
+     $gold-highlight 50%,
+     $gold-dark 60%,
+     $gold-light
+   );
+   border: 1px solid darken($gold-dark, 10%);
+   box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3),
+               0 2px 4px rgba(0, 0, 0, 0.3);
+ }
 
 @mixin grid($val) {
    display: grid;
@@ -100,6 +118,22 @@ section{
    border-left: 1rem solid var(--green);
 }
 
+.btn1{
+   display: inline-block;
+   margin-top: 1rem;
+   padding:1rem 3rem;
+   background: var(--white);
+   color:var(--black);
+   cursor: pointer;
+   font-size: 1.7rem;
+   text-transform: capitalize;
+   transition:.2s linear;
+
+   &:hover{
+      background: var(--green);
+      color:var(--black);
+   }
+}
 .btn{
    display: inline-block;
    margin-top: 1rem;
@@ -125,11 +159,13 @@ section{
 }
 
 .header{
+   @include glossy-gold;
    position: sticky;
-   top:0; left:0; right:0;
+   top: 0;
+   left: 0;
+   right: 0;
    box-shadow: var(--box-shadow);
    z-index: 1000;
-   background:var(--gold);
 
    .flex{
       padding:2rem;
@@ -414,7 +450,7 @@ section{
 }
 
 .about-container {
-   background: var(--dark-grey);
+   background: var(--black);
 
    .about {
       .heading {
@@ -518,8 +554,10 @@ section{
    }
 }
 .services-container{
-   background: var(--light-bg);
-
+   background: var(--black);
+   .heading {
+      color: var(--white);
+   }
    .services{
 
       .box-container{
@@ -558,7 +596,7 @@ section{
 }
 
 .projects-container {
-   background: var(--dark-grey);
+   background: var(--black);
 
    .projects {
       .heading {
@@ -718,6 +756,7 @@ section{
             align-items: center;
             flex-wrap: wrap;
             gap: 3rem;
+               
 
             .content {
                 flex: 1 1 41rem;
@@ -732,6 +771,40 @@ section{
                 }
             }
         }
+        .quote{
+         background-color: var(--black);
+         .box-container{
+            @include grid(30rem);
+      
+            form{
+               flex:1 1 41rem;
+               background: var(--white);
+               padding:2rem;
+      
+               h3{
+                  @include titleText(2.5rem);
+               }
+      
+               .box{
+                  margin:.7rem 0;
+                  width: 100%;
+                  padding:1.5rem 0;
+                  border-bottom: var(--border);
+                  font-size: 1.6rem;
+                  color:var(--light-color);
+      
+                  &:focus{
+                     border-color: var(--yellow);
+                  }
+               }
+      
+               textarea{
+                  height: 15rem;
+                  resize: none;
+               }
+            }
+         }
+      }
     }
 }
 .commercial-container{
@@ -800,6 +873,40 @@ section{
                 }
             }
         }
+        .quote{
+         background-color: var(--black);
+         .box-container{
+            @include grid(30rem);
+      
+            form{
+               flex:1 1 41rem;
+               background: var(--white);
+               padding:2rem;
+      
+               h3{
+                  @include titleText(2.5rem);
+               }
+      
+               .box{
+                  margin:.7rem 0;
+                  width: 100%;
+                  padding:1.5rem 0;
+                  border-bottom: var(--border);
+                  font-size: 1.6rem;
+                  color:var(--light-color);
+      
+                  &:focus{
+                     border-color: var(--yellow);
+                  }
+               }
+      
+               textarea{
+                  height: 15rem;
+                  resize: none;
+               }
+            }
+         }
+      }
     }
 }
 
@@ -813,7 +920,7 @@ section{
    background: var(--light-bg);
 
    .quote{
-
+      
       .box-container{
          @include grid(30rem);
    
@@ -849,7 +956,7 @@ section{
 }
 
 .contact-container{
-   background: var(--dark-grey);
+   background: var(--black);
   
 
    .contact{
@@ -1016,19 +1123,28 @@ section{
 
 
 // media queries 
-.body{
-   overflow-x: hidden;
-}
 
 @media (max-width:1200px){
-
+   html,body{
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+   }
    section{
       padding:3rem 2rem;
    }
 }
 
 @media (max-width:991px){
-
+   html,body{
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+   }
    html{
       font-size: 55%;
    }
@@ -1065,7 +1181,13 @@ section{
 }
 
 @media (max-width:768px){
-
+   html,body{
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+   }
    .header{
 
       .flex{
@@ -1094,7 +1216,13 @@ section{
 }
 
 @media (max-width:450px){
-
+html,body{
+   width: 100%;
+   height: 100%;
+   margin: 0;
+   padding: 0;
+   overflow-x: hidden;
+}
    html{
       font-size: 50%;
    }
